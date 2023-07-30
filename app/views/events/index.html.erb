@@ -1,0 +1,24 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Eventos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Evento</th>
+      <th>Data</th>
+      <th>Descrição</th>
+    </tr>
+  </thead>
+</table
+
+<div id="events">
+  <% @events.each do |event| %>
+    <%= render event %>
+    <p>
+      <%= link_to "Show this event", event %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New event", new_event_path %>
