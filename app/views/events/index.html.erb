@@ -2,23 +2,34 @@
 
 <h1>Eventos</h1>
 
-<table>
-  <thead>
+<table  class="table table-striped table-bordered table-hover">
+  <thead class="thead-dark">
     <tr>
       <th>Evento</th>
       <th>Data</th>
+      <th>Local</th>
       <th>Descrição</th>
+      <th colspan='3'></th>
     </tr>
   </thead>
-</table
 
-<div id="events">
-  <% @events.each do |event| %>
-    <%= render event %>
-    <p>
-      <%= link_to "Show this event", event %>
-    </p>
-  <% end %>
-</div>
 
-<%= link_to "New event", new_event_path %>
+   <tbody>
+    <% @events.each do |event| %>
+      <tr>
+        <td><%= event.name  %></td>
+        <td><%= event.date  %></td>
+        <td><%= event.location  %></td>
+        <td><%= event.description  %></td>
+        <td><%= link_to 'Detalhes', event  %></td>
+        <td><%= link_to 'Editar', edit_event_path(event) %></td>
+        
+        <td><%= link_to "Excluir", event,method: :delete, data: {turbo_confirm: "Excluir Evento. Tem certeza?"}, class:"link-danger" %> </td>
+      </tr>
+    <% end %>
+   </tbody>
+ </table>
+
+<br>
+
+<%= link_to 'Novo evento', new_event_path, class:"btn btn-secondary" %>
