@@ -10,6 +10,7 @@
       <th>Local</th>
       <th>Descrição</th>
       <th colspan='3'></th>
+      <th colspan='3'></th>
     </tr>
   </thead>
 
@@ -22,9 +23,9 @@
         <td><%= event.location  %></td>
         <td><%= event.description  %></td>
         <td><%= link_to 'Detalhes', event  %></td>
-        <td><%= link_to 'Editar', edit_event_path(event) %></td>
-        
+        <td><%= link_to 'Editar', edit_event_path(event) %></td>   
         <td><%= link_to "Excluir", event,method: :delete, data: {turbo_confirm: "Excluir Evento. Tem certeza?"}, class:"link-danger" %> </td>
+        <td><%= link_to 'Inscrever-se' %></td>
       </tr>
     <% end %>
    </tbody>
