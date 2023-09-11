@@ -1,0 +1,30 @@
+/* app/assets/stylesheets/custom.css */
+
+/* Defina o estilo para o corpo da página */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garante que a página ocupe pelo menos a altura da janela de visualização */
+  }
+  
+  /* Defina o estilo para o conteúdo principal */
+  .main-content {
+    flex-grow: 1; /* Faz com que o conteúdo principal ocupe o espaço restante */
+    padding: 20px; /* Adicione espaço interno para separar o conteúdo do rodapé */
+  }
+  
+  /* Defina o estilo para o rodapé fixo */
+  footer {
+    background-color: #373435;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed; /* Fixa o rodapé na parte inferior da janela de visualização */
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  
